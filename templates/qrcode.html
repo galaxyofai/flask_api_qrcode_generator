@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>World Of Artificial Intelligence</title>
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/about.css">
+
+</head>
+<body>
+
+Header
+<div class="header">
+  <a href="{{ url_for('home') }}" class="logo"><img src="https://img.freepik.com/free-vector/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata_1150-48136.jpg?w=740&t=st=1660533199~exp=1660533799~hmac=cedbbb46128c0b4980e2d61f1fb88112bac20ea355001d56b105ea635642769a" alt="AI Logo" width="50" height="50"></a>
+ 
+  <div class="header-right">
+   
+    <a class="active" href="{{ url_for('home') }}">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="{{ url_for('about') }}">About</a>
+    
+  </div>
+</div> -->
+<!-- END Header -->
+{% extends "home.html" %}
+{% block home %}
+<h2>Welcome To The QR Code Generator.</h2>
+<form action="{{ url_for('showqr') }}" method="POST">
+    <label for="text">Enter Text: </label>
+    <input type="text" id="text" name="text"><br><br>
+    
+    <input type="submit" value="Submit">
+</form>
+{% block qrcode %}{% endblock %}
+
+
+{% endblock %}
+
+
+
+<!-- </body>
+</html> -->
